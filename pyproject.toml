@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "contact-manager"
+version = "0.1.0"
+description = "A simple contact manager using FastAPI"
+authors = ["Your Name <you@example.com>"]
+packages = [{include = "auth"}, {include = "database"}, {include = "repository"}, {include = "routes"}, {include = "."}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "0.111.0"
+uvicorn = "0.30.1"
+pydantic = "2.7.4"
+pydantic-settings = "*"
+passlib = "*"
+python-jose = "*"
+SQLAlchemy = "1.4.22"
+psycopg2-binary = "2.9.6"
+fastapi-limiter = "0.1.2"
+aioredis = "2.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
